@@ -1,0 +1,22 @@
+== LCS / Edit Distance ==
+n=100  LCS 0.014 ms (len 32)   ED 0.019 ms (dist 88)
+n=500  LCS 0.366 ms (len 160)   ED 0.544 ms (dist 443)
+n=1000  LCS 1.501 ms (len 320)   ED 2.231 ms (dist 889)
+== String matching ==
+present  n=10000   naive     0.025 ms  kmp     0.018 ms  rk     0.128 ms  (matches 1)
+absent   n=10000   naive     0.028 ms  kmp     0.024 ms  rk     0.124 ms  (matches 0)
+present  n=50000   naive     0.125 ms  kmp     0.090 ms  rk     0.596 ms  (matches 1)
+absent   n=50000   naive     0.127 ms  kmp     0.098 ms  rk     0.620 ms  (matches 0)
+present  n=100000  naive     0.261 ms  kmp     0.185 ms  rk     1.258 ms  (matches 1)
+absent   n=100000  naive     0.249 ms  kmp     0.184 ms  rk     1.214 ms  (matches 0)
+== String matching, bad cases (extra) ==
+worstA   n=10000   naive     1.963 ms  kmp     0.034 ms  rk     0.120 ms  (matches 0)
+worstB   n=10000   naive     2.039 ms  kmp     0.042 ms  rk     2.266 ms  (matches 9901)
+worstA   n=50000   naive    10.428 ms  kmp     0.179 ms  rk     0.612 ms  (matches 0)
+worstB   n=50000   naive    10.304 ms  kmp     0.329 ms  rk    11.290 ms  (matches 49901)
+worstA   n=100000  naive    19.921 ms  kmp     0.303 ms  rk     1.202 ms  (matches 0)
+worstB   n=100000  naive    20.306 ms  kmp     0.597 ms  rk    24.153 ms  (matches 99901)
+== Kasai ==
+n=1000  kasai 0.007 ms  comps 1972
+n=5000  kasai 0.040 ms  comps 9971
+n=10000  kasai 0.088 ms  comps 19970
